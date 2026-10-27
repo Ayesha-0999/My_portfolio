@@ -1,0 +1,760 @@
+/* ================================
+   GOOGLE FONT STYLE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #03050b;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+nav {
+    height: 75px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(2, 4, 10, 0.95);
+
+    border-bottom: 1px solid #172554;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* Logo */
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #60a5fa;
+
+    text-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+/* Underline animation */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #3b82f6;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ================================
+   HOME SECTION
+================================ */
+
+.home {
+    min-height: 90vh;
+
+    padding: 80px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(30, 64, 175, 0.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #03050b,
+            #071126,
+            #02040a
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Small text */
+
+.small-text {
+    color: #60a5fa;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+
+/* Main heading */
+
+.home h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 75px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    color: white;
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+
+/* Job title */
+
+.home h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 30px;
+
+    color: #3b82f6;
+
+    margin-bottom: 20px;
+
+    font-weight: 600;
+}
+
+
+/* Introduction */
+
+.intro {
+    max-width: 620px;
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.buttons {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 32px;
+}
+
+
+.btn,
+.btn-outline {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 27px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+/* Main Button */
+
+.btn {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: white;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+.btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.45);
+}
+
+
+/* Outline Button */
+
+.btn-outline {
+    border: 1px solid #2563eb;
+
+    color: #60a5fa;
+
+    background: rgba(15, 23, 42, 0.4);
+}
+
+
+.btn-outline:hover {
+    background: #1d4ed8;
+
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+
+/* ================================
+   PROFILE PICTURE
+================================ */
+
+.profile {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* Glow behind picture */
+
+.profile::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    background: #1d4ed8;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0.18;
+
+    z-index: 0;
+}
+
+
+/* Picture */
+
+.profile img {
+    width: 290px;
+    height: 290px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #2563eb;
+
+    position: relative;
+    z-index: 1;
+
+    box-shadow:
+        0 0 0 8px rgba(37, 99, 235, 0.08),
+        0 0 45px rgba(37, 99, 235, 0.35);
+
+    transition: 0.4s;
+}
+
+
+.profile img:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 0 10px rgba(37, 99, 235, 0.1),
+        0 0 60px rgba(37, 99, 235, 0.55);
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.about,
+.skills,
+.projects,
+.contact {
+    padding: 100px 10%;
+
+    text-align: center;
+}
+
+
+.about {
+    background: #060a13;
+}
+
+
+.skills {
+    background: #03050b;
+}
+
+
+.projects {
+    background: #060a13;
+}
+
+
+.contact {
+    background: #03050b;
+}
+
+
+/* Section small heading */
+
+.section-title {
+    color: #60a5fa;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* Section heading */
+
+section h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-text {
+    max-width: 720px;
+
+    margin: auto;
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+.skill-list {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin-top: 45px;
+}
+
+
+.skill {
+    width: 180px;
+
+    padding: 30px 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b142b,
+            #070d1c
+        );
+
+    border: 1px solid #172554;
+
+    border-radius: 14px;
+
+    transition: 0.35s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.skill:hover {
+    transform: translateY(-10px);
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.18);
+}
+
+.skill h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    color: #60a5fa;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.skill p {
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+.project-list {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 45px;
+}
+
+
+.project-card {
+    width: 310px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b142b,
+            #070d1c
+        );
+
+    border: 1px solid #172554;
+
+    border-radius: 14px;
+
+    transition: 0.35s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 15px 40px rgba(37, 99, 235, 0.2);
+}
+
+
+.project-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    color: #60a5fa;
+
+    font-size: 21px;
+
+    margin-bottom: 14px;
+}
+
+
+.project-card p {
+    color: #94a3b8;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+.project-card a {
+    color: #3b82f6;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.project-card a:hover {
+    color: #93c5fd;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact > p {
+    color: #94a3b8;
+
+    margin-bottom: 15px;
+}
+
+
+.contact-info {
+    margin-top: 35px;
+}
+
+
+.contact-info p {
+    margin: 18px;
+
+    font-size: 17px;
+
+    color: #cbd5e1;
+}
+
+
+.contact-info a {
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.contact-info a:hover {
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(96, 165, 250, 0.6);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #02040a;
+
+    border-top: 1px solid #172554;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #02040a;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #1d4ed8;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    nav {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    .nav-links {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .home {
+        min-height: auto;
+
+        padding: 80px 7%;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .home h1 {
+        font-size: 55px;
+    }
+
+
+    .home h2 {
+        font-size: 24px;
+    }
+
+
+    .intro {
+        font-size: 15px;
+    }
+
+
+    .buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .profile img {
+        width: 230px;
+
+        height: 230px;
+    }
+
+
+    section h2 {
+        font-size: 34px;
+    }
+
+
+    .about,
+    .skills,
+    .projects,
+    .contact {
+        padding: 75px 7%;
+    }
+
+}
